@@ -1,0 +1,455 @@
+
+  
+  .about ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .skills ul li i {
+    color: #007bff;
+    margin-right: 8px;
+  }
+  
+  .section-title h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .section-title p {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  /* Skills Section Styles */
+/* Skills Section */
+/* Skills Section */
+.skills-section {
+  padding: 80px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.skills-section .skills-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px; /* Reduced gap between title and tagline */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-section .skills-tagline {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0; /* Removed top margin */
+  margin-bottom: 10px; /* Small gap between tagline and line */
+}
+
+/* Wave Line Container */
+
+/* Wave Line Container */
+.wave-line {
+  width: 100%;
+  max-width: 500px; /* Adjust the wave length */
+  margin: 0 auto 70px; /* Centered and spaced */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.wave-line svg {
+  width: 100%;
+  height: 20px; /* Adjust wave height */
+}
+
+.wave-line path {
+  stroke-linecap: round; /* Smooth ends for the wave */
+  animation: wave-flow 2s linear infinite; /* Infinite wave flow animation */
+}
+
+/* Wave Flow Animation */
+@keyframes wave-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -120;
+  }
+}
+
+@media (max-width: 768px) {
+  .wave-line {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wave-line {
+    max-width: 60px;
+  }
+}
+
+
+/* Responsive Adjustments */
+.skills-section {
+  padding: 40px 10px; /* Further reduced padding for smaller screens */
+}
+
+.skills-section .skills-title {
+  font-size: 2rem; /* Smaller font for mobile */
+}
+
+.skills-section .skills-tagline {
+  font-size: 0.9rem;
+}
+
+.skills-section .animated-line {
+  width: 80px; /* Narrower line for mobile */
+}
+
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  text-align: center;
+  width: 150px;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #6338ff calc(var(--progress) * 1%),
+    #e0e0e0 0
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 110px; /* Slightly smaller to create the thin ring */
+  height: 110px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.progress-circle:hover {
+  transform: scale(1.1);
+}
+
+.inner-circle {
+  width: 85px; /* Adjusted for thinner look */
+  height: 85px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.percentage {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: #666;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-wrapper {
+    gap: 20px;
+  }
+
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .progress-circle::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .inner-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .percentage {
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-wrapper {
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 120px;
+  }
+
+  .progress-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .progress-circle::before {
+    width: 72px;
+    height: 72px;
+  }
+
+  .inner-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .percentage {
+    font-size: 0.9rem;
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
+  }
+}
+/* Archive Gallery Section */
+/* Section Styles */
+.gallery-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #ffffff; /* Clean white background */
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.gallery-tagline {
+  font-size: 1.2rem;
+  color: #777;
+ 
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-card {
+  flex: 0 0 300px; /* Fixed card size */
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.gallery-card p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px 10px;
+  line-height: 1.4;
+}
+
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  color: #007bff; /* Subtle blue hover */
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gallery-card {
+    flex: 0 0 calc(33.33% - 20px); /* 3 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-card {
+    flex: 0 0 calc(50% - 20px); /* 2 cards in a row */
+  }
+
+  .carousel-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-card {
+    flex: 0 0 100%; /* 1 card in a row */
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .gallery-tagline {
+    font-size: 1rem;
+  }
+}
+/* Section Styling */
+/* Professional Strengths Section */
+.professional-strengths-section {
+  padding: 70px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+
+.professional-strengths-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.professional-strengths-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+ 
+}
+
+/* Grid for Strength Items */
+.professional-strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Individual Strength Item */
+.professional-strength-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.professional-strength-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Container */
+.strength-icon-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  background-color: #ecf0f1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strength-icon {
+  width: 85%;
+  height: 85%;
+}
+
+/* Heading and Description */
+.strength-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.strength-description {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+}

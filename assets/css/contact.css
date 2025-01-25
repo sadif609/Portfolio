@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #403327;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.contact-left {
+    flex: 40%;
+    padding: 30px;
+    background: #fcfeff;
+    color: #282020;
+}
+
+.contact-left h3 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-left h3 i {
+    margin-right: 15px;
+    color: #0b0b0b;
+    font-size: 20px;
+}
+
+.contact-left p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.contact-left iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.contact-right {
+    flex: 60%;
+    padding: 30px;
+    background: #ffffff;
+}
+
+.contact-right h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #2e383f;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-right input,
+.contact-right textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.contact-right textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-right button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #2e383f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-right button:hover {
+    background-color: #66ccff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
