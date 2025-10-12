@@ -145,7 +145,8 @@ html {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('../img/cvr.jpg') center center/cover no-repeat;
+  /* background: url('../img/cvr.jpg') center center/cover no-repeat; */
+  background: url('https://i.postimg.cc/9Qbf1X5V/cvr.jpg') center center/cover no-repeat;
   z-index: 1;
   opacity: 0.32;
   filter: brightness(0.85) blur(0.5px);
@@ -221,7 +222,7 @@ html {
     left: 0;
     width: 100vw;
     height: 320px;
-    background: url('../img/cvr.jpg') center center/cover no-repeat;
+    background: url('https://i.postimg.cc/9Qbf1X5V/cvr.jpg') center center/cover no-repeat;
     z-index: 1;
     opacity: 0.32;
     filter: brightness(0.85) blur(0.5px);
@@ -908,7 +909,7 @@ html {
     left: 0;
     width: 100vw;
     height: 220px;
-    background: url('../img/cvr.jpg') center center/cover no-repeat;
+    background: url('https://i.postimg.cc/9Qbf1X5V/cvr.jpg') center center/cover no-repeat;
     z-index: 1;
     opacity: 0.32;
     filter: brightness(0.85) blur(1px);
