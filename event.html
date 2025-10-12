@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Events Platform</title>
-    <link rel="stylesheet" href="assets/css/projectG.css">
+        <link rel="stylesheet" href="assets/css/projectG.css">
+        <style>
+            body.project-page-event .project-details{padding:18px 20px}
+            body.project-page-event .project-details > h2{font-size:1.6rem;margin-bottom:10px}
+            body.project-page-event .project-details p, body.project-page-event .project-summary p{line-height:1.8;text-align:justify;color:#222}
+            body.project-page-event .project-poster{padding:12px 0}
+        </style>
 </head>
 
-<body>
+<body class="project-page-event">
     <!-- Navbar -->
     <nav>
         <ul>
@@ -20,7 +26,7 @@
     <main id="home">
         <!-- Project Details Section -->
         <section class="project-details">
-            <h2>Project Details</h2>
+            <h2>NextGen Events Platform</h2>
             <p><strong>Overview:</strong> The NextGen Events Platform is a dynamic, full-stack web application designed
                 to simplify and modernize event management. It features secure user registration and login with
                 role-based access control, ensuring a safe and personalized experience for both organizers and
@@ -32,20 +38,22 @@
                 robust API integration, complete with proper error handling and data validation. Finally, the
                 application is cloud-deployed with a scalable database and secure environment configuration, ensuring
                 reliability and performance under varying workloads.</p>
-            <h2>Technologies Used</h2>
-            <p><strong>Frontend:</strong> React 18, JavaScript ES6+, CSS3, React Router, Axios, Vite<br>
-                <strong>Backend:</strong> Node.js, Express.js, MongoDB, Mongoose, JWT Authentication<br>
-                <strong>Security:</strong> Bcrypt.js, CORS, Passport.js, Google OAuth2<br>
-                <strong>Tools:</strong> Git, GitHub, Render.com, MongoDB Atlas, Multer (file uploads)
-            </p>
-            <div class="tools">
+            <div class="section">
+                <h2>Technologies Used</h2>
+                <p><strong>Frontend:</strong> React 18, JavaScript ES6+, CSS3, React Router, Axios, Vite<br>
+                    <strong>Backend:</strong> Node.js, Express.js, MongoDB, Mongoose, JWT Authentication<br>
+                    <strong>Security:</strong> Bcrypt.js, CORS, Passport.js, Google OAuth2<br>
+                    <strong>Tools:</strong> Git, GitHub, Render.com, MongoDB Atlas, Multer (file uploads)
+                </p>
+            </div>
+            <div class="section">
                 <h2>Key Features Implemented</h2>
                 <ul>
                     <li>User Authentication System : Registration, login, JWT tokens, password hashing</li>
                     <li>Complete CRUD Operations : Create, read, update, delete events with image uploads</li>
                     <li>Responsive Design : Mobile-first approach with 3 breakpoints (480px, 768px, 1024px+)</li>
                     <li>Event Registration System : Users can join/leave events with attendee tracking</li>
-                    <li>Modern UI/UX :Dark theme, smooth animations, professional design</li>
+                    <li>Modern UI/UX : Dark theme, smooth animations, professional design</li>
                     <li>RESTful API : 20+ endpoints with proper error handling and validation</li>
                     <li>Database Design : MongoDB with 3 collections (users, events, comments)</li>
                     <li>Cloud Deployment : Live application on Render.com with MongoDB Atlas</li>
@@ -56,27 +64,43 @@
         <!-- Poster Section -->
         <section class="project-poster">
             <a href="https://nextgen-events-platform.onrender.com/" target="_blank">
-                <h2 style="color: blueviolet;">Click for : Live Demo</h2>
-                <img src="assets/img/event-cover.png" alt="Project Poster">
+                <h2>Click for : Live Demo</h2>
+                <img src="assets/img/event-cvr.png" alt="Project Poster">
             </a>
         </section>
 
 
 
-
+        <!-- Image Slider Section 
+        <section class="project-screenshots">
+            <h2>Project Screenshots</h2>
+            <div class="slider">
+                <img src="images/screenshot1.jpg" alt="Screenshot 1">
+                <img src="images/screenshot2.jpg" alt="Screenshot 2">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+                <img src="images/screenshot3.jpg" alt="Screenshot 3">
+            </div>
+        </section>
         -->
 
         <!-- Summary Section -->
         <section class="project-summary">
             <h2>Summary</h2>
-            <p>A responsive event management platform where organizers can create and manage events, attendees can book and
-track seats in real time, and users can easily discover events with secure login and smart search</p>
+            <p>A responsive event management platform where organizers can create and manage events, attendees can book
+                and
+                track seats in real time, and users can easily discover events with secure login and smart search.
+            </p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 NextGen Events Platform </p>
+        <p>&copy; 2025 NextGen Events Platform</p>
     </footer>
 </body>
 

@@ -1,101 +1,75 @@
+:root{
+    --primary: #34b7a7;
+    --accent: #f7c873;
+    --dark: #232946;
+    --muted: #6c757d;
+    --page-bg: #f7f8fb;
+    --card-bg: #ffffff;
+}
+
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial}
+body{line-height:1.8;color:#222;background-color:var(--page-bg);font-size:16px}
 
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+a{text-decoration:none;color:var(--primary)}
+a:hover{text-decoration:underline}
 
 /* Navbar Styles */
-nav {
-    background: #ecf6db;
-    color: #16121d;
-    padding: 10px 20px;
-    justify-content: center; /* Horizontal center alignment */
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #1d1d20;
-    font-weight: bold;
-    
-}
+nav{background:var(--card-bg);color:var(--dark);padding:12px 20px;border-bottom:1px solid #eef2f5;display:flex;justify-content:center}
+nav ul{list-style:none;display:flex;gap:18px;align-items:center}
+nav ul li{margin:0}
+nav ul li a{color:var(--dark);font-weight:600}
 
 /* Section Styles */
-section {
-    padding: 40px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+section{padding:56px 28px;margin:28px auto;max-width:1400px;background:var(--card-bg);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.06)}
+section h2{margin-bottom:18px;font-size:1.8rem;color:var(--dark);display:inline-block;padding-bottom:6px;border-bottom:3px solid var(--primary)}
+section p{font-size:1.05rem;line-height:1.9;margin-bottom:14px;color:#444}
+
+/* Typography and alignment improvements */
+.project-details .card p,
+.project-details .card li,
+.project-summary p{font-family:'Poppins', Arial, sans-serif;color:#333;line-height:1.9;font-size:1.05rem;text-align:justify}
+
+/* Bullet styling */
+.project-details .card ul{list-style: disc;padding-left:20px;margin-left:8px}
+.project-details .card ul li{margin:8px 0}
+
+/* Wide screen layout: keep content comfortable width */
+@media (min-width:1100px){
+  .project-details .card{max-width:900px;margin:0 auto}
+  .project-poster{max-width:900px;margin:20px auto}
 }
 
-section h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
+/* Small-screen tweaks */
+@media (max-width:700px){
+  .project-details .card p, .project-summary p{font-size:0.95rem;line-height:1.6;text-align:left}
+  .project-poster img{width:100%;height:auto}
 }
 
-section p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 10px;
-    color: #555;
-}
-.tools {
-    background: #f1f1f1;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-}
-.tools ul {
-    list-style: none;
-    padding: 0;
-}
-.tools ul li {
-    margin: 5px 0;
-    font-size: 1rem;
-}
+/* Project-specific components */
+.project-details{background:transparent;padding:0}
+.project-details .card{background:var(--card-bg);padding:26px;border-radius:14px}
+.project-details .card .content{padding:8px 4px}
+.project-details h2{margin-bottom:8px}
+.project-details p{margin:10px 0}
+
+/* Ensure section content has breathing room */
+section .content, .project-details .card .content, .project-summary{padding:16px}
+
+/* Justify paragraphs for readability on wide screens */
+.project-details .card p, .project-summary p, .project-details .card .content p{ text-align:justify }
+.project-details h2{font-size:1.6rem;margin-top:0}
+.project-details ul{margin:12px 0 0 20px;color:#444}
+.project-details .section{margin-top:18px}
+.tools{background:#f8f9fa;padding:14px;border-radius:10px;margin-top:10px}
+.tools ul{list-style:none;padding:0}
+.tools ul li{margin:6px 0;font-size:1rem;color:#444}
 /* Poster Section */
-.project-poster img {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+.project-poster{ text-align:center }
+.project-poster img{display:block;width:100%;max-width:900px;margin:14px auto;border-radius:10px;box-shadow:0 12px 30px rgba(12,20,40,0.08)}
+
+.project-summary{margin-top:18px;background:linear-gradient(180deg,#fff,#fbfdff);padding:18px;border-radius:12px}
+.project-summary p{margin:0;color:#333}
 /* Style for the YouTube section */
 .youtube-section {
     padding: 2rem 1rem;
@@ -164,25 +138,7 @@ section p {
 }
 
 /* Footer Styles */
-footer {
-    background: #e8fce5;
-    color: #242425f9;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
+footer{background:transparent;color:var(--muted);text-align:center;padding:12px;margin-top:20px}
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    section {
-        padding: 20px 10px;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .slider img {
-        width: 200px;
-    }
-}
+@media (max-width:768px){section{padding:20px 12px}section h2{font-size:1.4rem}.slider img{width:200px}.project-poster img{max-width:100%}}

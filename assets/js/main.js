@@ -183,43 +183,4 @@
 
   });
 
-  // --- REMOVE CUSTOM NAVBAR TOGGLER LOGIC ---
-  // The following block overrides Bootstrap's collapse and causes issues. Commenting out:
-  /*
-    window.addEventListener('DOMContentLoaded', function() {
-      var navWrapper = document.getElementById('navbarNavWrapper');
-      var toggler = document.getElementById('navbarToggler');
-      if (navWrapper) {
-        navWrapper.classList.remove('show');
-        navWrapper.style.display = 'none';
-      }
-      if (toggler && navWrapper) {
-        toggler.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var isVisible = navWrapper.classList.contains('show');
-          if (isVisible) {
-            navWrapper.classList.remove('show');
-            navWrapper.style.display = 'none';
-          } else {
-            navWrapper.classList.add('show');
-            navWrapper.style.display = 'block';
-          }
-        });
-        navWrapper.querySelectorAll('.nav-link').forEach(function(link) {
-          link.addEventListener('click', function() {
-            navWrapper.classList.remove('show');
-            navWrapper.style.display = 'none';
-          });
-        });
-        document.addEventListener('click', function(e) {
-          if (navWrapper.classList.contains('show') && !navWrapper.contains(e.target) && e.target !== toggler) {
-            navWrapper.classList.remove('show');
-            navWrapper.style.display = 'none';
-          }
-        });
-      }
-    });
-  */
-  // --- END REMOVE ---
 })();
-

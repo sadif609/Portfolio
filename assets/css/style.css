@@ -103,21 +103,79 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent !important;
+}
+
+.hero-bg-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-bg-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s cubic-bezier(.4,0,.2,1);
+  z-index: 1;
+}
+
+.hero-bg-slideshow img.active {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 .hero::before {
+  /* Ensure the cover background is visible (override any inline/display:none) */
+  display: block !important;
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   background: url('../img/cvr.jpg') center center/cover no-repeat;
-  opacity: 0.32;
   z-index: 1;
-  filter: brightness(0.85) blur(.5px);
+  opacity: 0.32;
+  filter: brightness(0.85) blur(0.5px);
+}
+
+/* If the HTML still contains the hidden #cover-slideshow, force it visible and style its images */
+#cover-slideshow {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+#cover-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+/* show the first image as fallback */
+#cover-slideshow img:nth-child(1) {
+  opacity: 1;
 }
 
 @media (max-width: 992px) {
@@ -181,9 +239,9 @@ html {
     padding: 18px 8px 8px 8px;
     max-width: 100vw;
     margin: 0 auto;
-    background: rgba(44, 62, 80, 0.233);
+    background: rgba(44, 62, 80, 0.38);
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.109);
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,7 +297,7 @@ html {
   padding: 0 32px;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(44, 62, 80, 0.115);
+  background: rgba(44,62,80,0.04);
   border-radius: 32px;
 }
 
@@ -463,6 +521,16 @@ html {
   box-shadow: none !important;
 }
 
+/* Make archive card links preserve layout and feel clickable */
+.archive-link{
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.archive-link:focus{outline:2px dashed var(--primary-color);outline-offset:4px}
+.archive-link .archive-card{transition:transform 0.28s ease,box-shadow 0.28s ease}
+.archive-link:hover .archive-card{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.12)}
+
 
 
 .archive-img {
@@ -623,11 +691,10 @@ html {
 }
 
 .contact-info {
- 
+  border: 2px solid #ded0d083;
   padding: 40px;
   border-radius: 15px;
   height: fit-content;
-  border: 2px solid #ded0d083;
 }
 
 .contact-item {
@@ -651,13 +718,11 @@ html {
 }
 
 .contact-form {
-  
+ border: 2px solid #ded0d083;
   border-radius: 15px;
-  padding: 40px 32px;
-  padding-bottom: px;
+  padding: 75px 32px;
   display: flex;
   flex-direction: column;
-  border: 2px solid #ded0d083;
   gap: 18px;
 }
 
@@ -672,12 +737,12 @@ html {
   margin-bottom: 18px;
   font-size: 1rem;
   transition: border-color 0.3s;
-  
+  background: #f8f9fa;
 }
 
 .contact-form .form-control:focus {
   border-color: var(--primary-color);
-  
+  background: #fff;
 }
 
 .contact-form .row {
@@ -810,10 +875,10 @@ html {
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
 
@@ -909,6 +974,15 @@ html {
     word-break: break-word;
     color: #fff;
     z-index: 3;
+  }
+}
+
+@media (min-width: 601px) {
+  .hero-bg-slideshow {
+    height: 320px;
+  }
+  .hero-bg-slideshow img {
+    height: 320px;
   }
 }
 
